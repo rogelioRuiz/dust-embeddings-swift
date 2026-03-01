@@ -22,4 +22,4 @@ jobs:
           ln -s $GITHUB_WORKSPACE/dust-core-swift ../dust-core-swift
           ln -s $GITHUB_WORKSPACE/dust-onnx-swift ../dust-onnx-swift
           ln -s $GITHUB_WORKSPACE/dust-llm-swift ../dust-llm-swift
-      - run: swift build && swift test
+      - run: swift build -Xswiftc -swift-version -Xswiftc 5 && swift test -Xswiftc -swift-version -Xswiftc 5
