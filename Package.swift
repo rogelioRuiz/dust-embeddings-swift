@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "dust-embeddings-swift",
-    platforms: [.iOS(.v16), .macOS(.v13)],
+    platforms: [.iOS(.v16), .macOS(.v14)],
     products: [
         .library(name: "DustEmbeddings", targets: ["DustEmbeddings"])
     ],
@@ -12,6 +12,7 @@ let package = Package(
         .package(name: "dust-llm-swift", path: "../dust-llm-swift"),
         .package(name: "dust-onnx-swift", path: "../dust-onnx-swift"),
     ],
+    swiftLanguageVersions: [.v5],
     targets: [
         .target(
             name: "DustEmbeddings",
