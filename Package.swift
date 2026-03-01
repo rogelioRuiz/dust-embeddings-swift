@@ -12,7 +12,6 @@ let package = Package(
         .package(name: "dust-llm-swift", path: "../dust-llm-swift"),
         .package(name: "dust-onnx-swift", path: "../dust-onnx-swift"),
     ],
-    swiftLanguageVersions: [.v5],
     targets: [
         .target(
             name: "DustEmbeddings",
@@ -35,5 +34,6 @@ let package = Package(
                 .copy("Fixtures"),
             ]
         ),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
