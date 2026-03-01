@@ -1,0 +1,21 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: rogelioRuiz/dust-core-swift
+          path: ../dust-core-swift
+      - uses: actions/checkout@v4
+        with:
+          repository: rogelioRuiz/dust-onnx-swift
+          path: ../dust-onnx-swift
+      - uses: actions/checkout@v4
+        with:
+          repository: rogelioRuiz/dust-llm-swift
+          path: ../dust-llm-swift
+          submodules: recursive
+      - run: swift build && swift test
