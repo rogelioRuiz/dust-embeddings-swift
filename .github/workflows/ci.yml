@@ -5,21 +5,4 @@ jobs:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with:
-          repository: rogelioRuiz/dust-core-swift
-          path: dust-core-swift
-      - uses: actions/checkout@v4
-        with:
-          repository: rogelioRuiz/dust-onnx-swift
-          path: dust-onnx-swift
-      - uses: actions/checkout@v4
-        with:
-          repository: rogelioRuiz/dust-llm-swift
-          path: dust-llm-swift
-          submodules: recursive
-      - run: |
-          ln -s $GITHUB_WORKSPACE/dust-core-swift ../dust-core-swift
-          ln -s $GITHUB_WORKSPACE/dust-onnx-swift ../dust-onnx-swift
-          ln -s $GITHUB_WORKSPACE/dust-llm-swift ../dust-llm-swift
       - run: swift build -Xswiftc -strict-concurrency=minimal && swift test -Xswiftc -strict-concurrency=minimal

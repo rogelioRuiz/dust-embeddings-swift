@@ -8,9 +8,9 @@ let package = Package(
         .library(name: "DustEmbeddings", targets: ["DustEmbeddings"])
     ],
     dependencies: [
-        .package(name: "dust-core-swift", path: "../dust-core-swift"),
-        .package(name: "dust-llm-swift", path: "../dust-llm-swift"),
-        .package(name: "dust-onnx-swift", path: "../dust-onnx-swift"),
+        .package(url: "https://github.com/rogelioRuiz/dust-core-swift.git", from: "0.1.0"),
+        .package(url: "https://github.com/rogelioRuiz/dust-llm-swift.git", from: "0.1.0"),
+        .package(url: "https://github.com/rogelioRuiz/dust-onnx-swift.git", from: "0.1.0"),
     ],
     targets: [
         .target(
