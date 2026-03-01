@@ -2,6 +2,8 @@
   <img alt="dust" src="assets/dust_banner.png" width="400">
 </p>
 
+<p align="center"><strong>Device Unified Serving Toolkit</strong></p>
+
 # dust-embeddings-swift
 
 Standalone tokenizers and embedding runtime primitives for Dust — iOS/macOS.
